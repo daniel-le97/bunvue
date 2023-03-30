@@ -1,4 +1,4 @@
-FROM jarredsumner/bun:edge
+FROM jarredsumner/bun:latest
 WORKDIR /app
 COPY package.json package.json
 COPY bun.lockb bun.lockb
