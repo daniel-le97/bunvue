@@ -1,11 +1,11 @@
-FROM jarredsumner/bun:edge as deps
+FROM oven/bun as deps
 WORKDIR /app
 COPY package.json package.json
 COPY bun.lockb bun.lockb
 RUN bun install
 
 
-FROM jarredsumner/bun:edge as build
+FROM oven/bun as build
 WORKDIR /app
 COPY --from=deps /app .
 COPY . .
